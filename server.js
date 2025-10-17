@@ -17,10 +17,7 @@ app.use(loggerMiddleware);
 
 // Connect to MongoDB
 mongoose
-  .connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(MONGODB_URI)
   .then(() => {
     console.log('MongoDB connected successfully');
   })
